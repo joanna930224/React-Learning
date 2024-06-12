@@ -1,10 +1,14 @@
 import "./App.css";
 import Viewer from "./components/Viewer";
 import Controller from "./components/Controller";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    //콜백 실행
+  }, [count]);
 
   const onClickButton = (value) => {
     setCount(count + value);
